@@ -109,6 +109,8 @@ const areSomeTrue3 = bools3.some((b) => b === true)
 console.log(areSomeTrue3) //true
 const areAllStr3 = names3.some((name) => typeof name === 'number') // Are all strings ?
 console.log(areAllStr3) // false
+
+
 //Sorting string values
 const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
 console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
@@ -132,3 +134,17 @@ console.log(numbers) //[100, 37, 9.81, 3.14]
 
 
 
+const products1 = [
+    { product: 'banana', price: 3 },
+    { product: 'mango', price: 6 },
+    { product: 'potato', price: ' ' },
+    { product: 'avocado', price: 8 },
+    { product: 'coffee', price: 10 },
+    { product: 'tea', price: '' },
+  ]         
+      var msgTotal = products1.reduce(function(prev, cur) 
+      {
+      return prev +  (cur.price!==' ' && cur.price);
+      }, 0); 
+    console.log('Total sum products:', (msgTotal));
+  
