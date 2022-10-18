@@ -95,7 +95,7 @@ const result = names2.findIndex((name) => name.length > 7)
 console.log(result) // 0
 
 const age3 = ages2.findIndex((age) => age < 20)
-console.log("age findIndex",age3) // 5
+console.log("age findIndex",age) // 5
 
 //some
 /**
@@ -109,6 +109,26 @@ const areSomeTrue3 = bools3.some((b) => b === true)
 console.log(areSomeTrue3) //true
 const areAllStr3 = names3.some((name) => typeof name === 'number') // Are all strings ?
 console.log(areAllStr3) // false
+//Sorting string values
+const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
+console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
+//Now the original products array  is also sorted
+
+
+//Sorting Numeric values
+const numbers4 = [9.81, 3.14, 100, 37]
+// Using sort method to sort number items provide a wrong result. see below
+console.log(numbers4.sort()) //[100, 3.14, 37, 9.81]
+numbers.sort(function (a, b) {
+    return a - b
+})
+
+console.log(numbers) // [3.14, 9.81, 37, 100]
+
+numbers.sort(function (a, b) {
+    return b - a
+})
+console.log(numbers) //[100, 37, 9.81, 3.14]
 
 
 
